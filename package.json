@@ -16,12 +16,6 @@
   "activationEvents": ["*"],
   "main": "./out/extension.js",
   "contributes": {
-    "commands": [
-      {
-        "command": "mcptest.helloWorld",
-        "title": "Hello World"
-      }
-    ],
     "modelContextServerCollections": [
 			{
 				"id": "nugetServer",
