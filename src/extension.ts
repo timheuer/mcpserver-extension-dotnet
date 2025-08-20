@@ -4,8 +4,8 @@ export function activate(context: vscode.ExtensionContext) {
 
 	const didChangeEmitter = new vscode.EventEmitter<void>();
 
-	context.subscriptions.push(vscode.lm.registerMcpConfigurationProvider('nugetServer', {
-		onDidChange: didChangeEmitter.event,
+	context.subscriptions.push(vscode.lm.registerMcpServerDefinitionProvider('nugetMcpServer', {
+		onDidChangeMcpServerDefinitions: didChangeEmitter.event,
 		provideMcpServerDefinitions: async () => {
 			let output: vscode.McpServerDefinition[] = [];
 			
