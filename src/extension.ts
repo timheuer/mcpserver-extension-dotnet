@@ -11,8 +11,12 @@ export function activate(context: vscode.ExtensionContext) {
 			
 			let nugetServerDef: vscode.McpStdioServerDefinition = {
 				label: 'NuGet',
-				command: 'mcp-server-nuget',
-				args: [],
+				command: 'dnx',
+				args: [
+					'NuGet.Mcp.Server',
+					'--prerelease',
+					'--yes'
+				],
 				env: {}
 			};
 
